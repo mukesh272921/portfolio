@@ -65,6 +65,26 @@ address {
   font-style: normal;
 }
 
+.avatar {
+  margin: 2em 0;
+  height: 150px;
+  width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+  .avatar {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .avatar {
+    height: 125px;
+    width: 125px;
+  }
+}
+
 ::selection {
   background: var(--slate);
   color: var(--light);
