@@ -1,0 +1,83 @@
+html,
+:root {
+  --light: #fff;
+  --slate: #7c7c7c;
+  --midnight: #0c0c0c;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 87.5%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--light);
+  color: var(--slate);
+  margin: 3rem;
+  animation: glide 600ms cubic-bezier(0.37, 0, 0.63, 1) 100ms 1 forwards;
+  opacity: 0;
+}
+
+h1 {
+  color: var(--midnight);
+  font-weight: inherit;
+  font-size: 20px;
+}
+
+a {
+  color: var(--slate);
+}
+
+a:hover {
+  color: var(--midnight);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--midnight);
+  }
+
+  h1 {
+    color: var(--light);
+  }
+
+  a:hover {
+    color: var(--light);
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+::selection {
+  background: var(--slate);
+  color: var(--light);
+}
+
+@keyframes glide {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
